@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video com JavaScript</title>
+    <style>
+        #video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        #floating-button {
+            position: fixed;
+            top: 10px; /* Ajuste a distância do topo conforme necessário */
+            float: left;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém a URL armazenada no localStorage
+            var newVideoUrl = localStorage.getItem('leoflix-movie-url');
+
+            // Verifica se a URL não é nula e não está vazia
+            if (newVideoUrl && newVideoUrl.trim() !== '') {
+                // Obtém o elemento iframe pelo ID
+                var videoIframe = document.getElementById('video-iframe');
+
+                // Define o novo valor do atributo src
+                videoIframe.src = newVideoUrl;
+            }
+
+            // Adiciona um ouvinte de evento ao botão
+            document.getElementById('floating-button').addEventListener('click', function () {
+                window.location.replace('preview.html')
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="video">
+        <iframe id="video-iframe" class="video-iframe" src="https://drive.google.com/file/d/1HrJsr7zbBORtuBXHA-8K1HIgx5FcXlk8/preview" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Botão flutuante -->
+    <button id="floating-button">Voltar</button>
+</body>
+</html>

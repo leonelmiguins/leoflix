@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Bebas;
+    src: url('../font/Bebas.woff2');
+}
+
+@font-face {
+    font-family: SansProLatim;
+    src: url('../font/SansProLatim.woff2');
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: rgb(216, 216, 216);
+    margin: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+header {
+    background-color: rgba(24, 24, 24, 0.548);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header h3 {
+    font-family: Bebas;
+    font-size: 40px;
+    margin: 0;
+    color: rgb(165, 16, 16);
+}
+
+header h3:hover {
+    color: rgb(228, 63, 63);
+    cursor: pointer;
+}
+
+header a {
+    color: rgb(216, 216, 216);
+    font-family: SansProLatim;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+    border-bottom: 3px solid rgb(150, 29, 29);
+    padding-bottom: 3px;
+}
+
+section {
+    color: white;
+    font-family: SansProLatim;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+    background-color: rgba(54, 54, 54, 0.521);
+    border-radius: 20px;
+
+}
+
+section h2 {
+    margin-left: 30px;
+}
+
+.section-filmes-gdrive {
+    font-family: SansProLatim;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    /* Impedir a expansão dos cards para ocupar todo o espaço disponível */
+    width: 180px;
+    height: 250px;
+    border-radius: 8px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 3px solid rgba(44, 44, 44, 0.774);
+
+}
+
+.card:hover {
+    opacity: 0.8;
+    border-bottom: 3px solid rgb(197, 46, 46);
+    border-radius: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.background-container {
+    font-family: SansProLatim;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.637)), url('https://gkpb.com.br/wp-content/uploads/2022/06/yDI6D5ZQh67YU4r2ms8qcSbAviZ-e1655990092687.jpg'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white; /* Cor do texto sobreposto */
+    animation: fadeIn 2s ease-in-out;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.background-info-movie {
+    font-size: 18px;
+    margin-left: 30px;
+    width: 400px;
+}
+
+.background-info-movie button {
+    font-family: SansProLatim;
+    background-color: rgb(145, 39, 39);
+    color: aliceblue;
+    width: 150px;
+    padding: 8px;
+    border: none;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.background-info-movie button:hover {
+    background-color: rgb(197, 47, 47);
+}
+
+.info-sinopse {
+    font-size: 20px;
+    color: rgb(225, 225, 228);
+    height: 350px;
+    width: 350px;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.cover {
+    width: 220px;
+    height: 280px;
+    border: 2px solid white;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.genre {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-genre {
+    font-family: SansProLatim;
+    padding: 5px;
+    border: 2px solid white;
+    margin: 10px;
+    border-radius: 5px;
+    width: 130px;
+    text-align: center;
+}
+
+.card-genre:hover {
+    background-color: rgb(172, 46, 46);
+    color: rgb(245, 245, 245);
+}
+
