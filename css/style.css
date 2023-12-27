@@ -165,25 +165,14 @@ section h2 {
     border-radius: 10px;
 }
 
-.genre {
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-}
+@media (max-width: 600px) {
 
-.card-genre {
-    font-family: SansProLatim;
-    padding: 5px;
-    border: 2px solid white;
-    margin: 10px;
-    border-radius: 5px;
-    width: 130px;
-    text-align: center;
-}
+    .card {
+        width: 150px;
+        height: 200px;
+    }
 
-.card-genre:hover {
-    background-color: rgb(172, 46, 46);
-    color: rgb(245, 245, 245);
+    .background-container {
+        display: grid;
+    }
 }
-
